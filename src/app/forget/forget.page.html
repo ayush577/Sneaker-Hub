@@ -1,0 +1,48 @@
+<ion-content style="--background: black;">
+    <ion-buttons (click)="back()" class="backarrow">
+      <img src="../../assets/icon/backarroww.png" alt="">
+    </ion-buttons>
+  <ion-grid class="authpage" *ngIf="!isSent">
+    <ion-row>
+      <ion-col size="6" offset="3" text-center>
+        <div class="C_logo">
+          <img src="../../assets/icon/logo.png" alt="logo">
+        </div>
+      </ion-col>
+      <ion-col size="12" text-center class="form_col">
+        <form role="form" [formGroup]="forgetPass" (ngSubmit)="onSubmit()">
+          <div class=" error2">   
+            <ng-container *ngFor="let validation of validation_messages.email">
+              <div class="error-message" *ngIf="forgetPass.get('email').hasError(validation.type) && (forgetPass.get('email').dirty || forgetPass.get('email').touched)">
+                *{{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+          <ion-row class="formfield">
+            <ion-col size="12" >
+              <ion-item>
+                <ion-label class="placeholder_color" position="floating">Email ID</ion-label>
+                <ion-input type="email" formControlName="email"  (keyup.enter)="forgetuserpassword()"[(ngModel)]="data.email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" >
+                </ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="10" offset="1" text-center>
+              <ion-buttons class="auth_btn" (click)="forgetuserpassword()">
+                <img  [src]="forgetPass.valid ? '../../assets/next_FP_R.png' : '../../assets/next_FP.png'" alt="">
+              </ion-buttons>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngIf="isSent">
+    <ion-row>
+      <ion-col size="12" text-center>
+        <p class="h_message">MAIL SENT</p>
+        <img class="mailbox" src="../../assets/mailbox.png" alt="">
+        <p class="s_message">Please Check Your Mail For Password Reset</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

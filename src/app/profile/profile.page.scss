@@ -1,0 +1,67 @@
+.picture_back {
+  background-image: url("../../assets/profile_back.png");
+  height: 80vw;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: -1px;
+  justify-content: center;
+  div {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 33%;
+    margin-top: 10vw;
+    border: 0.5vw solid #fff;
+   
+
+    img {
+      // background-size: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: -1px 1px 11px 6px rgba(189, 172, 172, 0.33);
+    }
+  }
+  .user_name {
+    color: #fff;
+    font-family: "open sans", sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 25px;
+    white-space: nowrap;
+    margin: 10px auto;
+
+  }
+}
+.user_details {
+  color: #303030;
+  margin-top: 8vw;
+  ion-icon {
+    color: #303030;
+  }
+  .title {
+    padding-left: 3vw;
+    font-family: "open sans", sans-serif;
+    font-weight: 600;
+    font-size: 4.5vw;
+    text-transform: capitalize;
+  }
+}
+.edit_btn {
+  ion-buttons {
+    width: 100%;
+    justify-content: center;
+    background: transparent;
+    outline: none;
+    img {
+      width: 50%;
+    }
+  }
+}
+ion-item {
+  --padding-start: none !important;
+}

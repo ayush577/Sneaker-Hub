@@ -1,0 +1,19 @@
+.segment_button {
+    --color: #ffffff;
+    --color-checked: #ff0000;
+    width: 40vw;
+    font-size: 4vw;
+    text-transform: uppercase;
+  }
+  .img_div{
+    width: 100%;
+    height: 47vw;
+
+    img{
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+       
+        object-fit: cover;
+    }
+}

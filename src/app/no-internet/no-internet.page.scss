@@ -1,0 +1,39 @@
+ion-content{
+    --background:#000000;
+    --color:#ffffff;
+    font-family: "open sans",sans-serif;
+    
+    div{
+        margin: 25vw 0vw;
+    }
+    h2{
+        font-weight: 600;
+        font-size: 6.5vw;
+        margin: 0px;
+    }
+    h3{
+        font-weight: 500;
+        font-size: 3.5vw;
+        padding: 5vw;
+        margin: 0px;
+    }
+    .btncol{
+        text-align: -webkit-center;
+        margin: 15vw 0vw;
+        .subscribe{
+            padding: 2.3vw;
+            width: 40%;
+            --background: #ffffff;
+            color: #222428;
+            background: #fff;
+            font-family: "open sans",sans-serif;
+            border-radius: 6vw;
+            font-weight: 600;
+            --background-activated :#e4d5d5;
+            --color-activated :#757575;
+        }   
+       
+    }
+
+    
+}

@@ -1,0 +1,32 @@
+.logo{
+    img{
+       width: 50%;
+       margin-top: 7vw;
+    }
+}
+ion-item{
+    --padding-start:none;
+    border-bottom: 1px solid #7575;
+    margin-bottom: 5vw;
+    font-family: "open sans",sans-serif;
+}
+.name{  
+    text-transform: capitalize;
+}
+.textarea{
+    padding: 1vw;
+    border: 1px solid #7575;
+    //border-radius: 2vw;
+    margin-top: 10vw;
+}
+.submit{
+    ion-buttons{
+    width: 100%;
+    justify-content: center;
+    background: transparent;
+    outline: none;
+    img{
+        width: 50%;
+    }
+}
+}

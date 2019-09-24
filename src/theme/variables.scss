@@ -1,0 +1,251 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+ion-menu{
+  --width: 255px;
+}
+
+
+/** Ionic CSS Variables **/ 
+:root {
+  
+  /** primary **/
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #3171e0;
+  --ion-color-primary-tint: #4c8dff;
+
+  /** secondary **/
+  --ion-color-secondary: #0cd1e8;
+  --ion-color-secondary-rgb: 12, 209, 232;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #0bb8cc;
+  --ion-color-secondary-tint: #24d6ea;
+
+  /** tertiary **/
+  --ion-color-tertiary: #7044ff;
+  --ion-color-tertiary-rgb: 112, 68, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #633ce0;
+  --ion-color-tertiary-tint: #7e57ff;
+
+  /** success **/
+  --ion-color-success: #10dc60;
+  --ion-color-success-rgb: 16, 220, 96;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #0ec254;
+  --ion-color-success-tint: #28e070;
+
+  /** warning **/
+  --ion-color-warning: #ffce00;
+  --ion-color-warning-rgb: 255, 206, 0;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #e0b500;
+  --ion-color-warning-tint: #ffd31a;
+
+  /** danger **/
+  --ion-color-danger: #f04141;
+  --ion-color-danger-rgb: 245, 61, 61;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d33939;
+  --ion-color-danger-tint: #f25454;
+
+  /** dark **/
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 34, 34;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  /** medium **/
+  --ion-color-medium: #989aa2;
+  --ion-color-medium-rgb: 152, 154, 162;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #86888f;
+  --ion-color-medium-tint: #a2a4ab;
+
+  /** light **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 244, 244;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+
+
+  button{
+    outline: none !important;
+  }
+
+  ion-button{
+    outline: none !important;
+  }
+
+  ion-buttons{
+    outline: none !important;
+  }
+//login page signp page and auththenticity page 
+.auth_header{
+  height:10%;
+  background-image: none !important;
+  img{
+    width:30%;
+    max-width: 30%;
+  }
+}
+.backarrow{
+  width: 6.5vw;
+  margin: 0px 3vw;
+  padding: 7vw 1vw;
+}
+.authpage{
+  height: 100%;
+  background-repeat: round;
+  background-color:black;
+  padding: 0px;
+  .C_logo{
+  
+    position: relative;
+    .auth_text{
+        width: 67%;
+        position: absolute;
+        left: 16%;
+        top: 81%;
+      }
+    }
+    .form_col{
+      // margin-top: 10vw !important;
+      font-family: "open sans",sans-serif;
+      ion-item{
+        margin: 0vw 7vw;
+        --highlight-color-invalid:#ff0000;
+        --highlight-color-valid:green;
+        border-bottom: 1px solid white;
+        --background:transparent;
+        // padding-inline-end: 16px;
+        --padding-start:0px;
+        --ion-font-family: "open sans", sans-serif !important;
+        color: #ffffff !important;
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+      ion-label{
+        font-family: "open sans", sans-serif;
+        font-size: 3.5vw;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+
+      }
+      // ion-input{
+      //   border-bottom: 1px solid white;
+        
+      // }
+      .auth_btn{
+        width: fit-content;
+        justify-content: center;
+        img{
+          max-width: 60%;
+          width:60%;
+         
+        }
+      }
+    }
+  }
+
+
+  //common header
+  .common_header{
+    ion-toolbar{
+      height:13.5vw;
+      --border-style:none;
+        --background: #09163d;
+        padding: 0;
+        margin-top: -1px;
+        color: #ffffff !important;  
+        ion-title{
+            
+            padding-left: 15vw;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size:4vw;
+        }
+        ion-menu-button{
+            font-size: 11vw;
+            margin-top: -4px; 
+        } 
+        ion-icon{
+            font-size: 30px;
+        }
+    }
+  }
+  .empty_box{
+    
+    img{
+      width: 50% !important;
+      padding-top: 20vw;
+    }
+
+  }
+  .empty_msg1{
+    color: #09163d;
+    font-size: 4vw;
+    padding: 6vw 14vw;
+  }
+  
+  .error2{
+    .error-message  {
+      font-size: 1em;
+      color: red;
+      font-family: "Open sans", sans-serif;
+      font-weight: 500;
+      text-transform: capitalize;
+      letter-spacing: 0.5px; 
+    }
+}
+ion-searchbar {
+  ion-buttons{
+    position: absolute;
+    right: 5vw;
+    color: #757575;
+    .search{
+      font-size: 6vw !important;
+      color: #757575 !important;
+      border-left: 1px solid;
+      padding-left: 2vw;
+  
+    }
+  }
+  .searchbar-input-container {
+    input {
+      border-radius: 10vw;
+      text-align: left;
+      padding: 1vw 6vw;
+      padding-right: 22vw;
+    }
+  
+    button {
+      ion-icon {
+        border: none !important;
+        margin-left: -29vw;
+        color:#757575;
+      }
+    }
+  }
+}
+.customToast{
+  --background:#09163d;
+  --color:#ffffff;
+  margin-bottom: 10vw;
+}
+
+
+}

@@ -1,0 +1,80 @@
+<ion-content>
+
+  <ion-slides pager="true" (ionSlideDidChange)="slideChange()">
+    <ion-slide>
+      <ion-grid no-padding>
+        <ion-row class="skip_position">
+          <ion-col size="12" text-right>
+            <button (click)="skip()"  id="skip_button">{{ skipMsg }}</button>
+          </ion-col>
+          <ion-col text-center class="" size="12">
+            <h6 class="main_heading">Brand Recognition</h6>
+            <p class="sub_heading"> Est. 1977 </p>
+            <div class="position-abjustment">
+              <ion-img src="../../assets/slide-1.png"> </ion-img>
+            </div>
+            <div id="MyClockDisplay" class="date" >{{date1}}</div>
+            <div id="MyClockDisplay" class="clock" >{{time}}</div>
+            <div class="next_btn_div">
+              <h6 class="main_heading W_message">Brand Recognition Availavle From All Over The World</h6>
+              <ion-buttons (click)="next();">
+                <img src="../../assets/next_btn.png" alt="Next Button">
+              </ion-buttons>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid no-padding>
+        <ion-row class="skip_position">
+          <ion-col size="12" text-right>
+            <button (click)="skip()" id="skip_button">{{ skipMsg }}</button>
+          </ion-col>
+          <ion-col text-center class="" size="12">
+            <h6 class="main_heading heading2">Virtual Try-On</h6>
+            <p class="sub_heading"> </p>
+            <div class="position-abjustment">
+              <ion-img src="../../assets/slide-2.png"> </ion-img>
+            </div>
+            <div id="MyClockDisplay" class="date" >{{date1}}</div>
+            <div id="MyClockDisplay" class="clock" >{{time}}</div>
+            <div class="next_btn_div">
+              <h6 class="main_heading W_message">Virtual Try-On Products With Looks</h6>
+              <ion-buttons (click)="next();">
+                <img src="../../assets/next_btn.png" alt="Next Button">
+              </ion-buttons>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid no-padding>
+        <ion-row class="skip_position">
+          <ion-col size="12" text-right>
+            
+            <button (click)="skip()" id="skip_button">{{ skipMsg }}</button>
+          </ion-col>
+          <ion-col text-center class="" size="12">
+            <h6 class="main_heading heading2">Secure Payment</h6>
+            <p class="sub_heading">  </p>
+            <div class="position-abjustment">
+              <ion-img src="../../assets/slide-3.png"> </ion-img>
+            </div>
+            <div id="MyClockDisplay" class="date" >{{date1}}</div>
+            <div id="MyClockDisplay" class="clock" >{{time}}</div>
+            <div class="next_btn_div">
+              <h6 class="main_heading W_message">A Guaranteed Secure Payment Mechanism</h6>
+              <ion-buttons (click)="theEnd();">
+                <img src="../../assets/get_start.png" alt="GO TO HOME">
+              </ion-buttons>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+
+
+</ion-content>

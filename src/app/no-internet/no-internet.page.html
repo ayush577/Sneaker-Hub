@@ -1,0 +1,26 @@
+
+
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col size="12" text-center class="no_internet">
+      <div>
+        <img src="../../assets/icon/nointernet.png" alt="">
+      </div>
+      <h2>
+        No Internet Connection
+      </h2>
+      <h3>
+        You are not connected to the internet. Make sure Wi-Fi is on,
+        Airplane Mode is off and try again. 
+      </h3>
+    </ion-col>
+    <ion-col size="12" class="btncol"  >
+        <ion-button class="subscribe" (click)="checkConnection()">
+          <ion-ripple-effect></ion-ripple-effect> 
+          Retry
+        </ion-button>
+      </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

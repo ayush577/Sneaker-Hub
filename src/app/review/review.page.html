@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="closeModal()">
+      <img class="goback" src="../../assets/backblack.svg" />
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" text-center>
+        <ion-slides [options]="slideOpts">
+          <ion-slide>
+            <img class="slideimage" src="{{image}}" />
+          </ion-slide>
+        </ion-slides>
+        <div class="bottom">
+          <ion-buttons class="imgbtn" (click)="getActiveIndex(slide, i)" *ngFor="let slide of slideData; let i= index">
+            <img src="{{slide.imageurl}}" alt="">
+          </ion-buttons>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>

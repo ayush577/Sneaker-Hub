@@ -1,0 +1,60 @@
+<ion-header no-border class="common_header">
+  <ion-toolbar no-border class="home_toolbar">
+      <ion-buttons slot="start">
+          <ion-back-button text="" icon="md-arrow-back"></ion-back-button>
+        </ion-buttons>
+    <ion-searchbar
+      mode="md"
+      searchIcon=""
+      clear-icon="close"
+      [(ngModel)]="data"
+      (keyup.enter)="searchData(data)"
+     >
+      <ion-buttons (click)="searchData(data)">
+        <ion-icon name="search" class="search"></ion-icon>
+      </ion-buttons>
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row *ngIf="dataState==2">
+      <ion-col
+        size="6"
+        no-padding
+        *ngFor="let categoryData of CategoryData"
+        (click)="gotoDetails(categoryData.tbl_product_id)"
+        class="shoe-box"
+      >
+        <div class="img_div">
+          <img [src]="categoryData.imageurl" alt="" />
+        </div>
+        <h2 class="shoes_name">{{ categoryData.tbl_product_name }}</h2>
+        <p class="shoes_name">
+          {{ categoryData.tbl_product_price }}
+          <ion-buttons
+            class="buy_btn"
+           
+          >
+            <img src="../../assets/icon/buy_btn.png" alt="" />
+          </ion-buttons>
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="dataState==1">
+      <ion-col size="12" class="search_msg">
+        <ion-label >
+          Oops! no data found with this keyword try another keyword
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="dataState==0">
+      <ion-col size="12" class="search_msg">
+        <ion-label >
+          You can search your product by name and description.
+        </ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

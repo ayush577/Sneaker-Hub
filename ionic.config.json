@@ -1,0 +1,7 @@
+{
+  "name": "Sneaker_hub",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

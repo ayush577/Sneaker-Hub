@@ -1,0 +1,24 @@
+<ion-header no-border class="common_header">
+  <ion-toolbar no-border class="home_toolbar">
+     <ion-buttons color="light" slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-left >Category</ion-title>
+    <ion-buttons slot="primary" (click)="search()">
+      <ion-button  color="light">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+<ion-grid no-padding>
+  <ion-row>
+    <ion-col no-padding class="col_back1" size="6" text-center *ngFor="let category of CategoryData" (click)="gotocategory(category.tbl_category_id)">
+      <img src={{category.imageurl}} alt="">
+      <span class="category_title" >{{category.tbl_category_name}}</span>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

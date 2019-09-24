@@ -1,0 +1,78 @@
+<ion-content class="shoes_details" no-padding>
+  <ion-grid no-padding>
+    <ion-row no-padding>
+      <ion-col size="12" no-padding class="slider">
+        <ion-header no-border>
+          <ion-toolbar>
+            <ion-buttons slot="start" (click)="back()">
+              <img class="goback" src="../../assets/backwithicon.svg" />
+            </ion-buttons>
+            <ion-buttons slot="primary" (click)="search()">
+              <ion-button color="light">
+                <ion-icon slot="icon-only" name="search"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+          <!-- <ion-slides pager="true" [options]="slideOpts" (click)="reviewProduct()">
+            <ion-slide *ngFor="let slide of slideData"> -->
+          <div class="shoesimage">
+            <img class="slideimage" src={{postImage}}  (click)="reviewProduct()"/>
+          </div> 
+              <!-- </ion-slide>
+          </ion-slides> -->
+        </ion-header>
+      </ion-col>
+      <ion-col size="12" class="details_section">
+        <ion-row>
+          <ion-col size="8" class="name_price">
+            {{productname}}
+          </ion-col>
+          <ion-col size="4" text-right class="name_price">
+           {{productprice}}
+          </ion-col>
+          <ion-col size="12" class="description">
+            {{description}}
+          </ion-col>
+          <ion-col size="12" text-center>
+            <ion-row>
+              <ion-col size="6" class="submit">
+                  <ion-buttons (click)="callPopUp()">
+                    <img src="../../assets/purchase.png" alt="">
+                  </ion-buttons>
+              </ion-col>
+              <ion-col size="6" class="submit">
+                  <ion-buttons (click)='virtual()'>
+                    <img src="../../assets/vIrtual.png" alt="">
+                  </ion-buttons>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+          <ion-col size="12" class="description nomargin">
+            <p> SKU: {{sku}}</p>
+            <p >release date : {{relesedate}}</p>
+          </ion-col>
+          <ion-col size="12" class="name_price">
+             <p>colors</p>
+             <div class="color-section"> 
+               <span class="color_box" *ngFor="let c of colors" [ngStyle]="{'background-color': c.color}">       
+               </span>
+             </div>
+          </ion-col>
+          <ion-col size="12" class=" size_section" >
+            <p class="name_price">size</p>
+            <ion-chip *ngFor="let size of Size" tappable >
+                <ion-ripple-effect></ion-ripple-effect>
+              <ion-label >{{size.size}}</ion-label>
+            </ion-chip>    
+          </ion-col>
+          <ion-col size="12">
+            <p class="name_price">History</p>
+            <h1 class="description" > 
+              {{history}}
+            </h1>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

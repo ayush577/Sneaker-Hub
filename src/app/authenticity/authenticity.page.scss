@@ -1,0 +1,24 @@
+
+.authpage{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../assets/Authentcate_back.png') !important;
+    .C_logo{
+        margin-top: 9vw !important;
+    }
+    .bottom_btn{
+        bottom:4vw;
+        position: fixed;
+        
+        button{
+            width: fit-content;
+            justify-content: center;
+            background: transparent;
+            outline: none;
+            img{
+                width:66%;
+            }
+        }
+    }
+}

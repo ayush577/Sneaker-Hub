@@ -1,0 +1,34 @@
+ion-item{
+    margin: 30vw 0vw;
+}
+.h_message{
+    font-family: "open sans", sans-serif;
+    font-size: 6.5vw;
+    color: #09163D;
+    padding: 5vw;
+    margin-top: 25vw;
+}
+.mailbox{
+    width: 75%;
+    margin: 10vw 0vw;
+}
+.s_message{
+    font-family: "open sans", sans-serif;
+    font-weight: 600;
+    font-size: 3.9vw;
+    color: #09163D;
+    padding: 0vw 18vw;
+}
+.formfield{
+    margin-top: 13vw;  
+}
+
+.auth_btn{
+    width: fit-content;
+    justify-content: center;
+    img{
+      max-width: 50% !important;
+      width:50% !important;
+     margin-top: 15vw;
+    }
+  }

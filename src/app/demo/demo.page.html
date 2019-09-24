@@ -1,0 +1,54 @@
+<ion-content no-padding class="contentDemo" >
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col size="12" no-padding>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons color="light" slot="start">
+              <ion-menu-button color="light"></ion-menu-button>
+            </ion-buttons>
+            <ion-buttons slot="primary">
+              <ion-button color="light" (click)="callPopUp();">
+                <img class="cart" src="../../assets/cart.png" alt="" width="10vw">
+              </ion-button>
+            </ion-buttons>
+            <ion-title> <img src="../../assets/icon/demoicon.png" alt=""></ion-title>
+          </ion-toolbar>
+        </ion-header>
+      </ion-col>
+      <ion-col size="12" no-padding>
+        <ion-slides pager="true" #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" [options]="slideOpts" >
+          <ion-slide *ngFor="let slide of slideData">
+            <img class="slideimage" src="{{slide.imageurl}}" />
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+      <ion-col size="12"  class="btncol" style="margin-top:3vw;;">
+        <ion-buttons class="subscribe1" (click)='virtual()' >
+          Click for Virtual Try-on
+        </ion-buttons>
+      </ion-col>
+      
+      <ion-col size="12" text-center class="new_releases">
+          <h1 class="releases_heading">New Releases</h1>
+       <ion-row>
+         <ion-col size="6" *ngFor="let new of Releases" style="text-align: -webkit-center;">
+           <div class="imgdiv">
+             <img src={{new.imageurl}} alt="">
+           </div>
+         </ion-col>
+       </ion-row>
+      </ion-col>
+      <ion-col size="6" class="btncol" >
+        <ion-buttons class="login" routerLink="/login" routerDirection="forward">
+          Log In
+        </ion-buttons>
+      </ion-col>
+      <ion-col size="6" class="btncol" >
+        <ion-buttons class="subscribe" routerLink="/signup" routerDirection="back">
+          Subscribe
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

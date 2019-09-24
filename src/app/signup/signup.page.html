@@ -1,0 +1,70 @@
+
+<ion-content style="--background: black;">
+  <ion-buttons (click)="back()" class="backarrow">
+    <img src="../../assets/icon/backarroww.png" alt="">
+  </ion-buttons>
+  
+  <ion-grid class="authpage" >
+    <ion-row>
+      <ion-col size="6" offset="3" text-center>
+        <div class="C_logo">
+          <img src="../../assets/icon/logo.png" alt="logo">
+        </div>
+      </ion-col>
+      <ion-col size="12" text-center class="form_col">
+        <form role="form" [formGroup]="signupForm" >
+          <div class=" error2">
+            <ng-container *ngFor="let validation of validation_messages.name">
+              <div class="error-message" *ngIf="signupForm.get('name').hasError(validation.type) && (signupForm.get('name').dirty || signupForm.get('name').touched)">
+                *{{ validation.message }}
+              </div>
+            </ng-container>
+            <ng-container *ngFor="let validation of validation_messages.email">
+              <div class="error-message" *ngIf="signupForm.get('email').hasError(validation.type) && (signupForm.get('email').dirty || signupForm.get('email').touched)">
+                *{{ validation.message }}
+              </div>
+            </ng-container>
+            <ng-container *ngFor="let validation of validation_messages.password">
+              <div class="error-message" *ngIf="signupForm.get('password').hasError(validation.type) && (signupForm.get('password').dirty || signupForm.get('password').touched)">
+                *{{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+          <ion-row>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label class="placeholder_color" position="floating">Name</ion-label>
+                <ion-input type="text" formControlName="name" [(ngModel)]="data.name">
+                </ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label class="placeholder_color" position="floating">Email ID</ion-label>
+                <ion-input type="email" formControlName="email" [(ngModel)]="data.email">
+                </ion-input>
+                
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label class="placeholder_color" position="floating">Password</ion-label>
+                <ion-input [type]="passwordType" formControlName="password"  (keyup.enter)="register()" [(ngModel)]="data.password">
+                </ion-input>
+                <ion-icon class="password_eye" [name]="passwordIcon" slot="end" (click)="hideShowPassword()"></ion-icon>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-margin">
+            <ion-col size="10" offset="1" text-center >
+              <ion-buttons class="auth_btn" (click)="register()">
+                <img [src]="signupForm.valid ? '../../assets/v_signup_btn.png' : '../../assets/n_signup_btn.png'"
+                  alt="">
+              </ion-buttons>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

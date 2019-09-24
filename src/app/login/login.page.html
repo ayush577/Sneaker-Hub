@@ -1,0 +1,60 @@
+<ion-content style="--background: black;" >
+    <ion-buttons (click)="back()" class="backarrow">
+      <img src="../../assets/icon/backarroww.png" alt="">
+    </ion-buttons>
+  
+  <ion-grid class="authpage">
+    <ion-row>
+      <ion-col size="6" offset="3" text-center>
+        <div class="C_logo">
+          <img src="../../assets/icon/logo.png" alt="logo">
+        </div>
+      </ion-col>
+      <ion-col size="12" text-center class="form_col">
+        <form role="form" [formGroup]="loginForm">
+          <div class=" error2">   
+            <ng-container *ngFor="let validation of validation_messages.email">
+              <div class="error-message" *ngIf="loginForm.get('email').hasError(validation.type) && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+                *{{ validation.message }}
+              </div>
+            </ng-container>
+            <ng-container *ngFor="let validation of validation_messages.password">
+              <div class="error-message" *ngIf="loginForm.get('password').hasError(validation.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                *{{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+      <ion-row >
+        <ion-col size="12" >
+          <ion-item class="credit">
+            <ion-label class="placeholder_color" position="floating">Email ID</ion-label>
+            <ion-input type="email" formControlName="email" [(ngModel)]="data.email"  >
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12" >
+          <ion-item>
+            <ion-label class="placeholder_color" position="floating">Password</ion-label>
+            <ion-input [type]="passwordType" formControlName="password"  (keyup.enter)="login()" [(ngModel)]="data.password" >
+            </ion-input>
+            <ion-icon class="password_eye" [name]="passwordIcon"  slot="end" (click)="hideShowPassword()"></ion-icon>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <p class="forgot_style" routerLink="/forget" routerDirection="forward">Forgot Password?</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-margin">
+        <ion-col size="10" offset="1" text-center>
+         <ion-buttons class="auth_btn" (click)="login()">
+           <img  [src]="loginForm.valid ? '../../assets/v_login_btn.png' : '../../assets/n_login_btn.png'" alt="">
+         </ion-buttons>
+        </ion-col>
+      </ion-row>
+      </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

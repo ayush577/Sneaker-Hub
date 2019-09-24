@@ -1,0 +1,42 @@
+<ion-app>
+  <ion-menu side="start" type="overlay" class="menu_css" menuId="first" (ionWillOpen)="getUserInfo()">
+    <ion-header class="menu_header" *ngIf="isUserLoggedIn">
+      <div class="profile_pic">
+        <img src="{{ user.picture }}" alt="Profile Pic" />
+      </div>
+      <h2>{{ user.name }}</h2>
+    </ion-header>
+    <ion-content *ngIf="isUserLoggedIn">
+      <ion-list>
+        <ion-item *ngFor="let menuItem of appMenuItems" lines="none" (click)="openPage(menuItem)">
+          <img [src]="menuItem.icon" alt="icon" />
+          <p class="title">{{ menuItem.title }}</p>
+        </ion-item>
+      </ion-list>
+      <ion-buttons class="logoutbtn" (click)="logOut()">
+        Log Out
+      </ion-buttons>
+    </ion-content>
+
+    <ion-header class="menu_header" *ngIf="!isUserLoggedIn" style="background: #000000;">
+      <div class="profile_pic">
+        <img src="{{ defaultImageUrl }}" alt="Profile Pic" />
+      </div>
+      <h2>Hello Guest.</h2>
+    </ion-header>
+    <ion-content *ngIf="!isUserLoggedIn">
+      <ion-list>
+        <ion-item *ngFor="let menuItem of Categories" lines="none" (click)="openhome(menuItem.tbl_category_id)">
+          <p class="title">{{ menuItem.tbl_category_name }}</p>
+        </ion-item>
+        <ion-item  lines="none" (click)="videos()">
+          <p class="title">Videos</p>
+        </ion-item>
+      </ion-list>
+      <ion-buttons class="logoutbtn" (click)="homedemo()">
+        <label >Guest Page</label>
+      </ion-buttons>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-app>

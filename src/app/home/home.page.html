@@ -1,0 +1,49 @@
+<ion-header no-border class="common_header">
+  <ion-toolbar no-border class="home_toolbar">
+    <ion-buttons color="light" slot="start">
+      <ion-menu-button color="light" mode="md"></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-left>SNEAKERHUB</ion-title>
+    <ion-buttons slot="primary" (click)="search()">
+      <ion-button color="light">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar class="home_toolbar">
+    <ion-segment scrollable [(ngModel)]="activesegement" value="activesegement" mode="md"
+      (ionChange)="segmentChanged(activesegement)">
+
+      <ion-segment-button class="segment_button" *ngFor="let category1 of Category"
+        value="{{category1.tbl_category_id}}">
+        <ion-ripple-effect></ion-ripple-effect>
+        <p>{{category1.tbl_category_name}}</p>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col no-padding>
+            <ion-list>
+              <ion-row>
+                <ion-col size="6" no-padding *ngFor="let categoryData of CategoryData" (click)="gotoDetails(categoryData.tbl_product_id)"
+                  class="shoe-box">
+                  <div class="img_div">
+                    <img [src]="categoryData.imageurl" alt="">
+                  </div>
+                  <h2 class="shoes_name">{{categoryData.tbl_product_name}}</h2>
+                  <p class="shoes_name">{{categoryData.tbl_product_price}}
+                      <ion-buttons class="buy_btn" routerLink="/details" routerDirection="forward">
+                        <img src="../../assets/icon/buy_btn.png" alt="">
+                      </ion-buttons>
+                  </p>
+                </ion-col>
+              </ion-row>
+            </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

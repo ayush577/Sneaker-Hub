@@ -1,0 +1,46 @@
+.form_col {
+  margin-top: 10vw !important;
+}
+
+.credit:focus {
+  color: #dadada;
+  outline: none;
+  ion-item.item-md.item-input.input-has-focus .item-inner,
+  ion-item.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus)
+    .item-inner,
+  ion-item.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus)
+    .item-inner {
+    border-bottom-color: #dadada;
+    box-shadow: none;
+  }
+}
+
+.placeholder_color {
+  color: #fff;
+  font-size: 15px;
+}
+
+.password_eye {
+  margin-top: 29px;
+  color: #fff;
+  // border-bottom: 1px solid white;
+ // width:10px;
+
+  margin-right: -5px;
+  margin-bottom: -7px;
+  padding-bottom: 1vw;
+}
+
+.forgot_style {
+  margin: 4vw 0vw;
+  font-family: "open sans", sans-serif;
+  font-size: 13px;
+  text-align: end;
+  line-height: 0.5;
+  letter-spacing: 1px;
+  margin-left: 60% !important;
+  padding-right: 16px;
+  color: #fff;
+  padding: 4vw 0vw;
+  outline: none;
+}

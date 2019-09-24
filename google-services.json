@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "945863354186",
+    "firebase_url": "https://sneakerhub-77dd2.firebaseio.com",
+    "project_id": "sneakerhub-77dd2",
+    "storage_bucket": "sneakerhub-77dd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945863354186:android:69086540a28fb7300a83b3",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945863354186-c9dj08brj7q04nqtg5ch2stbuug0ulin.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHPN3SzVrDmzMd31sN5rHhXv-cVCfw7Vw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945863354186-c9dj08brj7q04nqtg5ch2stbuug0ulin.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

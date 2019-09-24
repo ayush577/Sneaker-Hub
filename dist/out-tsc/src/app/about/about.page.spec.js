@@ -1,0 +1,23 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { async, TestBed } from '@angular/core/testing';
+import { AboutPage } from './about.page';
+describe('AboutPage', () => {
+    let component;
+    let fixture;
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [AboutPage],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA],
+        })
+            .compileComponents();
+    }));
+    beforeEach(() => {
+        fixture = TestBed.createComponent(AboutPage);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
+});
+//# sourceMappingURL=about.page.spec.js.map

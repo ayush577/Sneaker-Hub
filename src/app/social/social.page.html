@@ -1,0 +1,52 @@
+<ion-header no-border class="common_header">
+  <ion-toolbar no-border class="home_toolbar">
+    <ion-buttons color="light" slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-left>social feeds</ion-title>
+    <ion-buttons slot="primary" (click)="search()">
+      <ion-button color="light">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar class="home_toolbar">
+    <!-- <ion-segment scrollable mode="md" value="activesegement" (ionChange)="segmentChanged(activesegement)"> -->
+    <ion-segment mode="md" [(ngModel)]="category1"  (ionChange)="segmentChanged($event)" value="instagram">
+      <ion-segment-button class="segment_button" value="instagram">
+        <p>Instagram</p>
+      </ion-segment-button>
+      <ion-segment-button class="segment_button" value="facebook">
+        <p>Facebook</p>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col no-padding>
+        <div [ngSwitch]="category1">
+          <div>
+            <ion-list *ngSwitchCase="'instagram'">
+              <ion-row>
+                <ion-col size="12" no-padding  class="shoe-box">
+                  <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+                  <iframe src="//lightwidget.com/widgets/40ea4149ce325da7b584f588e06f152e.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+
+                </ion-col>
+              </ion-row>
+            </ion-list>
+            <ion-list *ngSwitchCase="'facebook'">
+              <ion-row>
+                <ion-col size="12" no-padding  class="shoe-box">
+                  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsneakerhub&tabs=timeline&width=375&height=740&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="375" height="740" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                </ion-col>
+              </ion-row>
+            </ion-list>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header no-border class="common_header">
+  <ion-toolbar no-border class="home_toolbar">
+    <ion-buttons color="light" slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-left>Profile</ion-title>
+    <ion-buttons slot="primary" (click)="search()">
+      <ion-button color="light">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col class="picture_back" size="12" no-padding text-center>
+        <div class="profile_pic">
+          <!-- <img [src]="user.login ? 'user.picture' : '../assets/icon/man.svg' " alt=""> -->
+         <img src={{user.picture}} alt="">
+        </div>
+        <p class="user_name">{{user.name}}</p>
+      </ion-col>
+      <ion-col size="10" offset="1" class="user_details">
+        <ion-list>
+          <ion-item lines="none">
+            <ion-icon name="ios-mail"></ion-icon>
+            <p class="title">{{user.email}}</p>
+          </ion-item>
+          <ion-item lines="none">
+              <ion-icon name="md-pin"></ion-icon>
+            <p class="title">{{user.address}}</p>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col text-center size="12" class="edit_btn">
+        <ion-buttons routerLink="/eprofile" routerDirection="forward">
+          <img src="../../assets/edit_profile.png" alt="">
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

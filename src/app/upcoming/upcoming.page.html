@@ -1,0 +1,31 @@
+<ion-header no-border class="common_header">
+  <ion-toolbar no-border class="home_toolbar">
+     <ion-buttons color="light" slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title text-left >Upcoming Product</ion-title>
+    <ion-buttons slot="primary" (click)="search()">
+      <ion-button  color="light">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid no-padding>
+  <ion-row>
+    <ion-col no-padding size="12" *ngIf="!isBanner" >
+      <div class="banner" *ngFor="let banner of Banners" >
+          <img src="{{banner.imageurl}}" alt="">
+      </div>
+      
+    </ion-col> 
+     <ion-col no-padding size="12" text-center class="empty_box" *ngIf="isBanner" >
+      <img src="../../assets/ohno.png"  alt="">
+      <p class="empty_msg1"> No Upcoming Products right now :(</p>
+      
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
